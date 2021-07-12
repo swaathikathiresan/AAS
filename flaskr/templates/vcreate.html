@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1 class="h3 mb-2 text-gray-800">Vendor Details</h1>
+<p class="mb-4">Create new vendor</p>
+<div class="card shadow mb-4">
+  
+
+<body>
+  <div class="container">
+ <form method="post">
+  <label for="Vname">&emsp;<b>Name : </b> &emsp;&emsp; &emsp;&nbsp;</label>
+    <input name="Vname" id="Vname" style="width: 150px;" placeholder="Enter the name" value="{{ request.form['Vname'] }}" required>
+    <br>
+    <label for="cause">&emsp;<b>Department :</b>&emsp;</label>
+    <input name="cause" id="cause" style="width: 150px;" placeholder="Enter the department" value="{{ request.form['cause'] }}"  required>
+    <br>
+    <label for="phone">&emsp;<b>PhoneNo :</b>&nbsp;&emsp;  &ensp;</label>
+    <input name="phone" id="phone" style="width: 150px;" placeholder="Enter the phoneNo" value="{{ request.form['phone'] }}" required>
+    <br>
+    <label for="fee">&emsp;<b>Salary:</b>&emsp;&emsp;&emsp;&emsp;</label>
+    <input name="fee" id="fee"style="width: 150px;" placeholder="Enter the fee" value="{{ request.form['fee'] }}" required>
+    
+    <br>
+    <br>
+       
+    <button class ="btn btn-primary" style="margin-left: 19px">Save</button>
+    <input action="action" class="btn btn-primary" onclick="window.history.go(-1); 
+      return false;" type="submit" value="Cancel"/>
+  </form>
+</div>
+
+
+  </body>
+{% endblock %}  
